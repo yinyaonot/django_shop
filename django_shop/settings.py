@@ -3,6 +3,8 @@ import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# 把apps添加到pycharm的扫描环境中
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -23,7 +25,6 @@ SYS_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
 ]
 # 扩展的apps
 EXT_APPS = []
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'django_shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shop',
+        'NAME': 'shop_01',
         'HOST': 'localhost',
         'PORT': '3306',
         'USER': 'root',
